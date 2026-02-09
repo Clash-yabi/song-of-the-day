@@ -4,25 +4,20 @@ document
   .getElementById("nieuwe-quote-knop")
   .addEventListener("click", haalQuoteOp);
 
-function haalQuoteOp() {
-  fetch("https://api.api-ninjas.com/v2/randomquotes?categories=love", {
-    method: "GET",
-    headers: {
-      "X-Api-Key": apiKey,
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.quote) {
-        document.getElementById("quote-tekst").textContent = `"${data.quote}"`;
-      } else {
-        document.getElementById("quote-tekst").textContent =
-          "Geen quote gevonden. Probeer het later opnieuw!";
-      }
-    })
-    .catch((error) => {
-      console.error("Fout bij het ophalen van de quote:", error);
-      document.getElementById("quote-tekst").textContent =
-        "Er ging iets mis met het ophalen van de quote.";
-    });
+async function haalQuoteOp() {
+  try {
+    const response = await fetch("/api/love");
+    const data = await response.json();
+
+    // data is een array
+    const quote = data[0].quote;
+    const author = data[0].author;
+
+    document.getElementById("quote-tekst").textContent =
+      `"${quote}" — ${author}`;
+  } catch (error) {
+    console.error(error);
+    document.getElementById("quote-tekst").textContent =
+      "Er ging iets mis. Probeer opnieuw.";
+  }
 }
