@@ -108,6 +108,7 @@ body {
   user-select: none;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 0.5em 0.5em 0.5em 1.1em;
   font-family: "Forum", sans-serif;
   font-size: 1em;
@@ -230,8 +231,7 @@ body {
 }
 .txt-1,
 .txt-2 {
-  position: absolute;
-  word-spacing: -1em;
+  word-spacing: 0;
 }
 .txt-1 {
   animation: appear-anim 1s ease-in-out forwards;
