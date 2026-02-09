@@ -20,6 +20,6 @@ async function haalQuoteOp() {
   } catch (error) {
     console.error(error);
     document.getElementById("quote-tekst").textContent =
-      "Er ging iets mis. Probeer opnieuw.";
+      "Er ging iets mis. Probeer opnieuw.", error;
   }
 }
