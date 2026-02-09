@@ -6,7 +6,14 @@ document
 
 async function haalQuoteOp() {
   try {
-    const response = await fetch("/api/love");
+    const response = await fetch(
+      "https://api.api-ninjas.com/v2/randomquotes?categories=love",
+      {
+        headers: {
+          "X-Api-Key": apiKey,
+        },
+      }
+    );
     const data = await response.json();
 
     // data is een array
