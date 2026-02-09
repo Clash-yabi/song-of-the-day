@@ -233,6 +233,7 @@ body {
   position: absolute;
   word-spacing: -1em;
 }
+
 .txt-1 {
   animation: appear-anim 1s ease-in-out forwards;
 }
