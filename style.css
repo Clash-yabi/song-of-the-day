@@ -92,7 +92,7 @@ body {
 
 /*button*/
 
-/* From Uiverse.io by dexter-st */
+/* From Uiverse.io by dexter-st */ 
 .btn-wrapper {
   position: relative;
   display: inline-block;
@@ -108,9 +108,8 @@ body {
   user-select: none;
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 0.5em 0.5em 0.5em 1.1em;
-  font-family: "Forum", sans-serif;
+  font-family: "Poppins", "Inter", "Segoe UI", sans-serif;
   font-size: 1em;
   font-weight: 400;
 
@@ -231,7 +230,8 @@ body {
 }
 .txt-1,
 .txt-2 {
-  word-spacing: 0;
+  position: absolute;
+  word-spacing: -1em;
 }
 .txt-1 {
   animation: appear-anim 1s ease-in-out forwards;
@@ -405,6 +405,7 @@ body {
     drop-shadow(0 -4px 6px #0009);
   animation: none;
 }
+
 
 /* background style*/
 /* From Uiverse.io by Cobp */
