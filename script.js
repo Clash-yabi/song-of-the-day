@@ -19,7 +19,9 @@ async function haalQuoteOp() {
 `;
   } catch (error) {
     console.error(error);
-    document.getElementById("quote-tekst").textContent =
-      "Er ging iets mis. Probeer opnieuw.", error;
+    document.getElementById("quote-tekst").innerHTML = `
+  <p>Er ging iets mis. Probeer opnieuw.</p>
+  <small>${error.message}</small>
+`;
   }
 }
