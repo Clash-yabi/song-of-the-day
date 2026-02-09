@@ -13,8 +13,10 @@ async function haalQuoteOp() {
     const quote = data[0].quote;
     const author = data[0].author;
 
-    document.getElementById("quote-tekst").textContent =
-      `"${quote}" — ${author}`;
+    document.getElementById("quote-tekst").innerHTML = `
+  <p>"${quote}"</p>
+  <small>— ${author}</small>
+`;
   } catch (error) {
     console.error(error);
     document.getElementById("quote-tekst").textContent =
