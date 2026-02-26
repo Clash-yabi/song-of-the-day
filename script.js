@@ -7,7 +7,7 @@ document
 async function haalQuoteOp() {
   try {
     const response = await fetch(
-      "https://api.api-ninjas.com/v2/randomquotes?categories=love",
+      "https://api.api-ninjas.com/v2/quoteoftheday",
       {
         headers: {
           "X-Api-Key": apiKey,
